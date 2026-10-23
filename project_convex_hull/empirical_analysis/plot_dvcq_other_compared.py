@@ -11,6 +11,8 @@ from byu_pytest_utils import compute_average_runtimes
 
 def main():
 
+
+
     filename = "_dvcq_convex_hull_runtimes.json"
 
     with open(filename, "r") as f:
@@ -32,12 +34,12 @@ def main():
     # Update title, legend, and axis labels as needed
 
     plt.plot(dvcq_sizes, dvcq_times, c="k", lw=2, alpha=0.5, label="DVCQ")
-    plt.plot(other_sizes, other_times, c="m", lw=2, alpha=0.5, label="[FILL ME IN]")
+    plt.plot(other_sizes, other_times, c="m", lw=2, alpha=0.5, label="Jarvis March")
 
     plt.legend()
     plt.xlabel("n")
     plt.ylabel("Runtime (ms)")
-    plt.title("Time for DVCQ Convex Hull vs. [FILL ME IN] Convex Hull")
+    plt.title("Time for DVCQ Convex Hull vs. Jarvis MArch Convex Hull")
 
     fig.show()
     fig.savefig("dvcq_v_other.svg")
