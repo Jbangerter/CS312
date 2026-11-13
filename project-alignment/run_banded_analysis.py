@@ -4,7 +4,7 @@ import os
 import sys
 
 this_folder = os.path.dirname(__file__)
-sys.path.append(os.path.join(this_folder, ".."))
+sys.path.append(os.path.join(this_folder, ""))
 
 from alignment import align
 
@@ -17,8 +17,8 @@ from byu_pytest_utils import (
 
 
 def preprocessing(size):
-    seq1_path = Path("../test_files/bovine_coronavirus.txt")
-    seq2_path = Path("../test_files/murine_hepatitus.txt")
+    seq1_path = Path("test_files/bovine_coronavirus.txt")
+    seq2_path = Path("test_files/murine_hepatitus.txt")
     seq1 = "".join(seq1_path.read_text().splitlines())[:size]
     seq2 = "".join(seq2_path.read_text().splitlines())[:size]
 
